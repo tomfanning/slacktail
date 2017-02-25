@@ -18,8 +18,6 @@ namespace slacktail
         {
             SetProcessName();
 
-            //const string url = "https://hooks.slack.com/services/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";
-
             string conf = "/etc/slack.conf";
 
             if (!File.Exists(conf))
