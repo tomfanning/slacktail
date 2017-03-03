@@ -26,7 +26,7 @@ namespace slacktail
                 Environment.Exit(-1);
             }
 
-            url = File.ReadAllText(conf);
+            url = File.ReadAllText(conf).Trim();
             if (string.IsNullOrWhiteSpace(url) || !url.StartsWith("https://hooks.slack.com/services/"))
             {
                 Console.WriteLine($"{conf} contains invalid Slack webhook URL, get one from https://my.slack.com/services/new/incoming-webhook/");
